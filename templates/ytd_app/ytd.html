@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title_block %} Downloader page {% endblock %}
+{% block bodyblock %}
+
+<h1>Downloader page</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    
+</form>
+{% endblock bodyblock %}
