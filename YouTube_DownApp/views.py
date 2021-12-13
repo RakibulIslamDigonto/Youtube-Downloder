@@ -17,6 +17,7 @@ def down_video(request):
                 down_link.download([vid_url])
             messages.success(request, 'Hi, your Video Downloaded successfull')
             return redirect('YouTube_DownApp:home_page')
+            
         else:
             messages.warning(request, 'You should enter your video link')
             return redirect('YouTube_DownApp:home_page')

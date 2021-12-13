@@ -2,9 +2,11 @@
 {% load static %}
 {% block title_block %} Home page {% endblock %}
 {% block bodyblock %}
-
-<div class="container">
-    <h1 class='text-center bg-info m-auto p-2 '>Let's Download Your Video</h1>
+<br>
+{% comment %} <div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1 class='text-center bg-info m-auto p-2 rounded'>Let's Download Your Video</h1>
     <br>
     <br>
     <div class="mb-3">
@@ -16,6 +18,26 @@
         <button type="submit" class="form-control btn btn-danger" id="btn">Download Now</button>
       </form>
     </div>
+  </div>
+</div> {% endcomment %}
+
+
+<div class="container w-50">
+  <div class="pr-5 mr-5">
+        <h1 class='text-center bg-info m-auto p-2 rounded'>Let's Download Your Video</h1>
+    <br>
+    <br>
+    <div class="mb-3">
+      <form action="{% url 'YouTube_DownApp:down_video' %}" method="POST">
+        {% csrf_token %}
+        <label for="exampleFormControlInput1" class="form-label"><b>Enter Video URL</b></label>
+        <input type="text" class="form-control" name="url" id="url_name" placeholder="YouTube video URL">
+        <br><br>
+        <button type="submit" class="form-control btn btn-danger" id="btn">Download Now</button>
+      </form>
+    </div>
+  </div>
+
 </div>
 
 <div class='container w-25'>
